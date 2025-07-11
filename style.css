@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.navbar {
+    background-color: #285eb4;
+    padding: 1rem 3rem;
+}
+
+/* Sobre mi */
+#about-me {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about-me> {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Skills */
+
+.card-skills {
+    width: 8rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Projects */
+.card-projects {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+}
+
+/* Tecnologias */
+
+/* Badges personalizados para tecnologías */
+
+.badge-html {
+  background-color: #e34c26; /* naranja HTML */
+  color: white;
+}
+
+.badge-css {
+  background-color: #264de4; /* azul CSS */
+  color: white;
+}
+
+.badge-javascript {
+  background-color: #f0db4f; /* amarillo JS */
+  color: black;
+}
+
+.badge-react {
+  background-color: #61dafb; /* azul claro React */
+  color: black;
+}
+
+.badge-java {
+  background-color: #007396; /* azul Java */
+  color: white;
+}
+
+.badge-php {
+  background-color: #6e4f9a; /* púrpura PHP */
+  color: white;
+}
+
+.badge-nodejs {
+  background-color: #68a063; /* verde Node.js */
+  color: white;
+}
+
+.badge-springboot {
+  background-color: #6db33f; /* verde Spring Boot */
+  color: white;
+}
+
+.badge-python {
+  background-color: #306998; /* azul Python */
+  color: white;
+}
+
+.badge-mysql {
+  background-color: #00758f; /* azul MySQL */
+  color: white;
+}
+
+.badge-sqlserver {
+  background-color: #CC2927; /* rojo SQL Server */
+  color: white;
+}
+
+.badge-bootstrap {
+  background-color: #7952b3; /* morado Bootstrap */
+  color: white;
+}
+
+.badge-tailwind {
+  background-color: #38b2ac; /* verde azulado Tailwind */
+  color: white;
+}
+
+.badge-pyspark {
+  background-color: #f68b1e; /* naranja PySpark */
+  color: white;
+}
+
+.badge-powerapps {
+  background-color: #68217a; /* púrpura Power Apps */
+  color: white;
+}
+
+.badge-powerautomate {
+  background-color: #0078d4; /* azul Power Automate */
+  color: white;
+}
+
+.badge-powerbi {
+  background-color: #f2c811; /* amarillo Power BI */
+  color: black;
+}
+
+.badge-git {
+  background-color: #f05033; /* rojo Git */
+  color: white;
+}
+
+.badge-github {
+  background-color: #333; /* negro GitHub */
+  color: white;
+}
+
+.badge-figma {
+  background-color: #f24e1e; /* naranja Figma */
+  color: white;
+}
+
+.badge-jira {
+  background-color: #0052cc; /* azul Jira */
+  color: white;
+}
+
+.badge-scrum {
+  background-color: #6f42c1; /* morado Scrum */
+  color: white;
+}
