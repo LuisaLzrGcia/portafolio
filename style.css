@@ -1,28 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h5 {
+    color: #562F5E !important;
 }
 
 .navbar {
-    background-color: #285eb4;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+}
+
+
+.navbar span {
+    color: #b56b83 !important;
+}
+
+.navbar.scrolled {
+    background: linear-gradient(180deg,
+            #F8F3EF);
+    box-shadow: rgb(86, 29, 70, 0.1) 0px 8px 24px;
+}
+
+.navbar a {
+    color: #f8f0ea;
+    /* Color claro base para texto normal */
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 3px;
+    color: #f8f0ea;
+}
+
+.nav-link.active {
+    color: #eca8bb;
+    /* Rosado pastel cuando está activo */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ae6a97 !important;
+    /* Rosa malva al hacer hover */
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: #eca8bb;
+    /* Rosado pastel debajo del activo */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ae6a97;
+    /* Línea suave para hover */
+    border-radius: 1px;
+    transform: translateY(6px);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar.scrolled .nav-link {
+    color: #561d46 !important;
+    /* Vino profundo o el color que prefieras */
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: #ae6a97 !important;
+    /* Rosa malva */
+}
+
+#navbar-mobile {
+    background-color: transparent;
+}
+
+
+section {
+    scroll-margin-top: 3rem;
+}
+
+
+section>h2 {
+    font-size: 4rem;
+    font-weight: bolder;
+    padding-top: 2rem;
+}
+
+section h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #AD6A96;
+}
+
+section h5 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #AD6A96;
+}
+
+.gradient-background-1 {
+    /* background: linear-gradient(45deg,
+            #561D46,
+            #AD6A96,
+            #EBA8BA,
+            #F8F1EB,
+            #FFF); */
+    background: linear-gradient(130deg,
+            #561D46,
+            #ae6a97,
+            #ae6a97,
+            #ae6a97,
+            #eca8bb,
+            #eca8bb,
+            #eca8bb,
+            #f8f0ea,
+            #f8f0ea,
+            #f8f0ea,
+            #ffffff, 
+            #ffffff ,
+            #ffffff);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+    color: #561d46;
+    /* texto oscuro legible */
+}
+
+.span-intro {
+    font-size: 2.8rem;
+    font-weight: bold;
 }
 
 /* Sobre mi */
 #about-me {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin-top: 0px;
+    background-color: #F7F6FD;
+    margin: 0px;
+    padding: 0px;
 }
 
-#about-me> {
-    display: flex;
-    justify-content: space-between;
+.container-luisa {
+    height: 40%;
+}
+
+.container-info-luisa {}
+
+#about-me img {
+    padding-top: 2rem;
+    width: 100%
+}
+
+#about-me div {
+    font-size: 1.5rem;
 }
 
 /* Skills */
@@ -33,134 +201,281 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Projects */
-.card-projects {
-    width: 50%;
-    padding: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
-@media (min-width: 992px) {
+.card-skills>img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Projects */
+
+@media (max-width: 991px) {
+    .navbar {
+        background-color: #f8f0ea !important;
+    }
+
     .navbar-collapse {
-        display: flex !important;
-        justify-content: flex-end !important;
+        padding: 2rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Cambia a center si prefieres centrado */
+        padding-left: 1rem;
+        gap: 1rem;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #561d46 !important;
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse .nav-link:hover {
+        color: #ae6a97 !important;
+    }
+
+    main {
+        margin-top: 3rem;
     }
 }
+
 
 /* Tecnologias */
 
 /* Badges personalizados para tecnologías */
 
 .badge-html {
-  background-color: #e34c26; /* naranja HTML */
-  color: white;
+    background-color: #e34c26;
+    /* naranja HTML */
+    color: white;
 }
 
 .badge-css {
-  background-color: #264de4; /* azul CSS */
-  color: white;
+    background-color: #264de4;
+    /* azul CSS */
+    color: white;
 }
 
 .badge-javascript {
-  background-color: #f0db4f; /* amarillo JS */
-  color: black;
+    background-color: #f0db4f;
+    /* amarillo JS */
+    color: black;
 }
 
 .badge-react {
-  background-color: #61dafb; /* azul claro React */
-  color: black;
+    background-color: #61dafb;
+    /* azul claro React */
+    color: black;
 }
 
 .badge-java {
-  background-color: #007396; /* azul Java */
-  color: white;
+    background-color: #007396;
+    /* azul Java */
+    color: white;
 }
 
 .badge-php {
-  background-color: #6e4f9a; /* púrpura PHP */
-  color: white;
+    background-color: #6e4f9a;
+    /* púrpura PHP */
+    color: white;
 }
 
 .badge-nodejs {
-  background-color: #68a063; /* verde Node.js */
-  color: white;
+    background-color: #68a063;
+    /* verde Node.js */
+    color: white;
 }
 
 .badge-springboot {
-  background-color: #6db33f; /* verde Spring Boot */
-  color: white;
+    background-color: #6db33f;
+    /* verde Spring Boot */
+    color: white;
 }
 
 .badge-python {
-  background-color: #306998; /* azul Python */
-  color: white;
+    background-color: #306998;
+    /* azul Python */
+    color: white;
 }
 
 .badge-mysql {
-  background-color: #00758f; /* azul MySQL */
-  color: white;
+    background-color: #00758f;
+    /* azul MySQL */
+    color: white;
 }
 
 .badge-sqlserver {
-  background-color: #CC2927; /* rojo SQL Server */
-  color: white;
+    background-color: #CC2927;
+    /* rojo SQL Server */
+    color: white;
 }
 
 .badge-bootstrap {
-  background-color: #7952b3; /* morado Bootstrap */
-  color: white;
+    background-color: #7952b3;
+    /* morado Bootstrap */
+    color: white;
 }
 
 .badge-tailwind {
-  background-color: #38b2ac; /* verde azulado Tailwind */
-  color: white;
+    background-color: #38b2ac;
+    /* verde azulado Tailwind */
+    color: white;
 }
 
 .badge-pyspark {
-  background-color: #f68b1e; /* naranja PySpark */
-  color: white;
+    background-color: #f68b1e;
+    /* naranja PySpark */
+    color: white;
 }
 
 .badge-powerapps {
-  background-color: #68217a; /* púrpura Power Apps */
-  color: white;
+    background-color: #68217a;
+    /* púrpura Power Apps */
+    color: white;
 }
 
 .badge-powerautomate {
-  background-color: #0078d4; /* azul Power Automate */
-  color: white;
+    background-color: #0078d4;
+    /* azul Power Automate */
+    color: white;
 }
 
 .badge-powerbi {
-  background-color: #f2c811; /* amarillo Power BI */
-  color: black;
+    background-color: #f2c811;
+    /* amarillo Power BI */
+    color: black;
 }
 
 .badge-git {
-  background-color: #f05033; /* rojo Git */
-  color: white;
+    background-color: #f05033;
+    /* rojo Git */
+    color: white;
 }
 
 .badge-github {
-  background-color: #333; /* negro GitHub */
-  color: white;
+    background-color: #333;
+    /* negro GitHub */
+    color: white;
 }
 
 .badge-figma {
-  background-color: #f24e1e; /* naranja Figma */
-  color: white;
+    background-color: #f24e1e;
+    /* naranja Figma */
+    color: white;
 }
 
 .badge-jira {
-  background-color: #0052cc; /* azul Jira */
-  color: white;
+    background-color: #0052cc;
+    /* azul Jira */
+    color: white;
 }
 
 .badge-scrum {
-  background-color: #6f42c1; /* morado Scrum */
-  color: white;
+    background-color: #6f42c1;
+    /* morado Scrum */
+    color: white;
+}
+
+.btn-pink {
+    background-color: #561D46;
+    color: #F8F1EB;
+    font-weight: bolder;
+}
+
+.btn-pink:focus {
+    background-color: #EBA8BA;
+    color: #561D46;
+}
+
+.btn-pink:hover {
+    background-color: #EBA8BA;
+    color: #561D46;
+}
+
+
+/* Colores y fondos */
+
+/* 🎨 Paleta de colores personalizada */
+
+.color-1 {
+    color: #561d46;
+}
+
+.bg-1 {
+    background-color: #561D46;
+}
+
+.color-2 {
+    color: #AD6A96;
+}
+
+.bg-2 {
+    background-color: #AD6A96;
+}
+
+.color-3 {
+    color: #eca8bb;
+}
+
+.bg-3 {
+    background-color: #eca8bb;
+}
+
+.color-4 {
+    color: #f8f0ea;
+}
+
+.bg-4 {
+    background-color: #f8f0ea;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+footer svg {
+    width: 1.8rem;
+    margin: 0rem 1rem;
+}
+
+#btn-scroll-top {
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #561d46;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-scroll-top svg {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+#btn-scroll-top:hover {
+    background-color: #F8F1EB;
+    color: #561d46;
 }
