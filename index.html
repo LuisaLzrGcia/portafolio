@@ -17,8 +17,6 @@
     <header>
         <nav class="navbar navbar-expand-lg" id="navbar">
             <div class="container-fluid">
-                <!-- Branding
-                <span class="navbar-brand fs-1 text-white" href="#">&lt;LuisaLzrGcia/&gt;</span> -->
 
                 <!-- Botón hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -60,15 +58,16 @@
         <section id="about-me" class="gradient-background-1">
             <div class="row align-items-center">
                 <!-- Primera mitad: Nombre -->
-                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center container-luisa">
+                <div class="col-lg-6 col-md-10 d-flex flex-column justify-content-center align-items-center container-luisa">
                     <img src="./assets/Diseño sin título (2).png" alt="">
                 </div>
 
 
                 <!-- Segunda mitad: Información -->
-                <div class="col-md-5 container-info-luisa">
+                <div class="col-lg-6 col-md-10 container-info-luisa">
                     <p class="mb-4">
-                        <span class="span-intro">Hola, soy Luisa</span>, desarrolladora full-stack junior apasionada por
+                        <span class="span-intro titles">Hola, soy Luisa</span>, desarrolladora full-stack junior
+                        apasionada por
                         la tecnología y el aprendizaje constante. Me gusta crear proyectos prácticos usando Java,
                         JavaScript y PHP. Disfruto trabajar en equipo y siempre busco nuevas formas de crecer y mejorar
                         como profesional.
@@ -78,7 +77,7 @@
             </div>
         </section>
         <section id="skills" class="d-flex justify-content-center align-items-center flex-column bg-4">
-            <h2 class="w-100 text-center color-1">Skills</h2>
+            <h2 class="w-100 text-center color-1 titles">Skills</h2>
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12 mb-3">
@@ -176,11 +175,11 @@
             </div>
         </section>
         <section id="work-experience" class="">
-            <h2 class="w-100 text-center mb-4 color-1">Experiencia laboral</h2>
+            <h2 class="w-100 text-center mb-4 color-1 titles">Experiencia laboral</h2>
 
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-10 p-4">
+                <div class="row justify-content-center gap-4">
+                    <div class="col-lg-10 col-md-12">
                         <h5 class="">Desarrolladora Power Platform</h5>
                         <p class="mb-1"><strong>Empresa:</strong> DTS Solutions</p>
                         <p class="mb-3"><strong>Periodo:</strong> Marzo 2024 - Actual</p>
@@ -195,7 +194,7 @@
                                 comunicación, adaptabilidad y enfoque a resultados.</li>
                         </ul>
                     </div>
-                    <div class="col-md-10 p-4">
+                    <div class="col-lg-10 col-md-12">
                         <h5 class="">Becario de desarrollo</h5>
                         <p class="mb-1"><strong>Empresa:</strong> Orbia Coatzacoalcos</p>
                         <p class="mb-3"><strong>Periodo:</strong> Julio 2023 - Enero 2024</p>
@@ -211,13 +210,13 @@
             </div>
         </section>
         <section id="education" class="d-flex justify-content-center align-items-center flex-column py-5 bg-4">
-            <h2 class="w-100 text-center mb-4 color-1">Educación y Cursos</h2>
-
             <div class="container">
-                <div class="row justify-content-center">
+                <h2 class="w-100 text-center mb-5 color-1 titles">Educación y Cursos</h2>
+
+                <div class="row justify-content-center gap-5">
                     <!-- Educación formal -->
-                    <div class="col-md-10 p-4 mb-4">
-                        <h5 class="">Ingeniería en Sistemas Computacionales</h5>
+                    <div class="col-lg-10 col-md-12">
+                        <h5>Ingeniería en Sistemas Computacionales</h5>
                         <p class="mb-1">
                             <i>
                                 <strong>Instituto Tecnológico Superior de Coatzacoalcos</strong>
@@ -225,8 +224,7 @@
                             </i>
                         </p>
 
-
-                        <h5 class=" mt-4">Técnico en Programación</h5>
+                        <h5 class="mt-4">Técnico en Programación</h5>
                         <p class="mb-1">
                             <i>
                                 <strong>CBTIS No. 213</strong>
@@ -236,12 +234,11 @@
                     </div>
 
                     <!-- Cursos -->
-                    <div class="col-md-10 p-4">
-                        <h5 class="">Cursos Destacados</h5>
+                    <div class="col-lg-10 col-md-12">
+                        <h5 class="mb-3">Cursos Destacados</h5>
                         <ul class="mb-0">
                             <li><strong>Desarrollador Java Fullstack</strong> – Generation México (Mayo 2025 - Agosto
                                 2025)</li>
-
                             <li><strong>Introducción a Java</strong> – Fundaula (2025)</li>
                             <li><strong>Professional en Coding</strong> – DEV.F (2022)</li>
                             <li><strong>Análisis de Datos con Google</strong> – Coursera (2023)</li>
@@ -253,8 +250,9 @@
         </section>
 
 
+
         <section id="projects" class="d-flex justify-content-center align-items-center flex-column">
-            <h2 class="w-100 text-center color-1">Proyectos</h2>
+            <h2 class="w-100 text-center color-1 titles">Proyectos</h2>
 
             <div class="container py-4">
                 <div class="row justify-content-center g-4">
@@ -339,33 +337,42 @@
             </div>
         </section>
 
-        <section id="contact-me" class="d-flex justify-content-center align-items-center flex-column bg-4">
-            <h2 class="w-100 text-center color-1">Contáctame</h2>
-            <h5 class="mb-5">¿Tienes un proyecto en mente o necesitas ayuda con desarrollo web?
-                ¡Escríbeme!</h5>
+        <section id="contact-me" class="d-flex justify-content-center align-items-center flex-column bg-4 py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <h2 class="w-100 text-center color-1 titles">Contáctame</h2>
+                        <h5 class="mb-5 text-center">¿Tienes un proyecto en mente o necesitas ayuda con desarrollo web?
+                            ¡Escríbeme!</h5>
 
-            <form class="row">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre completo</label>
-                    <input type="text" class="form-control" id="name" placeholder="Ej. Luisa García" required>
-                </div>
+                        <form class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="name" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="name" placeholder="Ej. Luisa García"
+                                    required>
+                            </div>
 
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
-                </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com"
+                                    required>
+                            </div>
 
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="message" rows="5"
-                        placeholder="Cuéntame sobre tu idea o necesidad..." required></textarea>
-                </div>
+                            <div class="col-12 mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" rows="5"
+                                    placeholder="Cuéntame sobre tu idea o necesidad..." required></textarea>
+                            </div>
 
-                <div class="text-center">
-                    <button type="submit" class="btn btn-pink px-4 py-2 mb-3">Enviar mensaje</button>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-pink px-4 py-2 mb-3">Enviar mensaje</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
         </section>
+
 
         <footer class="bg-1 text-white py-4">
             <div class="container text-center">
@@ -390,8 +397,7 @@
         </footer>
 
         <button id="btn-scroll-top" title="Ir arriba">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"  class="bi bi-chevron-up"
-                viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                     d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
             </svg>
