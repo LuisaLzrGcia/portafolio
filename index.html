@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <!-- CSS de AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Iconos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
 
 </head>
 
@@ -29,7 +32,10 @@
                     <!-- Menú alineado a la derecha -->
                     <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#about-me">Acerca de mí</a>
+                            <a class="nav-link active" href="#main">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#about-me">Sobre mi</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
@@ -55,7 +61,7 @@
 
 
     <main data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
-        <section id="about-me" class="gradient-background-1">
+        <section id="main" class="gradient-background-1">
             <div class="row align-items-center">
                 <!-- Primera mitad: Nombre -->
                 <div
@@ -65,15 +71,68 @@
 
 
                 <!-- Segunda mitad: Información -->
-                <div class="col-lg-6 col-md-10 container-info-luisa">
-                    <p class="mb-4">
-                        <span class="span-intro titles">Hola, soy Luisa</span>, desarrolladora full-stack junior
-                        apasionada por
-                        la tecnología y el aprendizaje constante. Me gusta crear proyectos prácticos usando Java,
-                        JavaScript y PHP. Disfruto trabajar en equipo y siempre busco nuevas formas de crecer y mejorar
-                        como profesional.
-                    </p>
-
+                <div class="col-lg-6 col-md-10 container-info-luisa text-center mx-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <p class="hello">Hola!</p>
+                            <p class="name">Soy Luisa</p>
+                        </div>
+                        <div>
+                            <span class="titles badge-custom">Full Stack Developer</span>
+                            <span class="titles badge-custom">Data Analyst</span>
+                        </div>
+                        <!-- Bloque de íconos de redes y CV -->
+                        <div class="mt-4 icons-info">
+                            <a href="https://www.linkedin.com/in/maluisalzrgcia/" target="_blank" class="mx-2"
+                                title="LinkedIn">
+                                <i class="bi bi-linkedin" style="font-size: 2rem; color: #561d46;"></i>
+                            </a>
+                            <a href="https://github.com/LuisaLzrGcia" target="_blank" class="mx-2" title="GitHub">
+                                <i class="bi bi-github" style="font-size: 2rem; color: #561d46;"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1_z7qZ6oqFc4layZDQG7FpMFUA3uJCtJ6/view?usp=sharing"
+                                target="_blank" class="mx-2" title="Ver CV">
+                                <i class="bi bi-file-earmark-person-fill" style="font-size: 2rem; color: #561d46;"></i>
+                            </a>
+                        </div>
+                        <div class="floating-button">
+                            <button id="goToAbout" class="btn-float">Sobre mí</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-me">
+            <h2 class="w-100 text-center mb-4 color-1 titles">Sobre mi</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 profile-container">
+                        <div class="profile-pic-container">
+                            <img src="./assets/luisa-profile.jpg" alt="Foto de perfil" class="profile-pic">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 py-3">
+                        <p class="text-center">
+                            ¡Hola! Soy <span class="text-bold">María Luisa</span>, desarrolladora Full Stack con
+                            una gran pasión por la tecnología, la programación y el aprendizaje constante.
+                        </p>
+                        <p class="text-center">
+                            Desde pequeña me fascinó el funcionamiento de las computadoras. Con el tiempo
+                            descubrí que no solo podía usar los programas en ellas, sino también crear mis propios
+                            programas. Esa
+                            curiosidad me llevó a estudiar programación y convertirme en Ingeniera en Sistemas.
+                        </p>
+                        <p class="text-center">
+                            Disfruto colaborar con otras personas y participar en proyectos que me permitan crecer
+                            profesionalmente. Siempre estoy en busca de mejorar, aprender algo nuevo y aportar lo mejor
+                            de mí a cada equipo del que formo parte.
+                        </p>
+                        <p class="text-center">
+                            Me considero una persona organizada, curiosa, autodidacta y
+                            creativa. En mi tiempo libre me gusta correr, ver series, escuchar música
+                            y compartir momentos con mis mascotas.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -175,9 +234,8 @@
                 </div>
             </div>
         </section>
-        <section id="work-experience" class="">
+        <section id="work-experience">
             <h2 class="w-100 text-center mb-4 color-1 titles">Experiencia laboral</h2>
-
             <div class="container">
                 <div class="row justify-content-center gap-4">
                     <div class="col-lg-10 col-md-12">
@@ -284,8 +342,17 @@
                                     <span class="badge badge-java me-1">Java</span>
                                     <span class="badge badge-springboot me-1">Spring Boot</span>
                                 </div>
-                                <a target="_blank" href="https://luisalzrgcia.github.io/ClickNSweet/index.html"
-                                    class="btn btn-pink mt-auto">Ver proyecto</a>
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://luisalzrgcia.github.io/ClickNSweet/index.html"
+                                            class="btn btn-pink w-100">Ver demo <i class="bi bi-eye-fill"></i></a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://github.com/LuisaLzrGcia/ClickNSweet"
+                                            class="btn btn-pink w-100">Ver repositorio <i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -316,8 +383,16 @@
                                     <span class="badge badge-javascript me-1">JavaScript</span>
                                     <span class="badge badge-sweetalert me-1">SweetAlert</span>
                                 </div>
-                                <a target="_blank" href="https://luisalzrgcia.github.io/sport-shop/"
-                                    class="btn btn-pink mt-auto">Ver proyecto</a>
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://luisalzrgcia.github.io/sport-shop/"
+                                            class="btn btn-pink w-100">Ver demo <i class="bi bi-eye-fill"></i></a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://github.com/LuisaLzrGcia/sport-shop"
+                                            class="btn btn-pink w-100">Ver repositorio <i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -345,8 +420,16 @@
                                     <span class="badge badge-bootstrap me-1">Bootstrap</span>
                                     <span class="badge badge-javascript me-1">JavaScript</span>
                                 </div>
-                                <a target="_blank" href="https://pokedex-eight-puce.vercel.app/"
-                                    class="btn btn-pink mt-auto">Ver proyecto</a>
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://pokedex-eight-puce.vercel.app/"
+                                            class="btn btn-pink w-100">Ver demo <i class="bi bi-eye-fill"></i></a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://github.com/LuisaLzrGcia/Pokedex"
+                                            class="btn btn-pink w-100">Ver repositorio <i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -365,9 +448,13 @@
                             </div>
                             <div class="card-body d-flex flex-column">
                                 <p class="card-text">
-                                    Herramienta en línea para evaluar la competencia digital docente, basada en el marco
-                                    europeo DigCompEdu y enfocada en mejorar el uso de tecnologías en la educación.
+                                    Desarrollo de herramienta en línea para la autoevaluación de la competencia digital
+                                    docente, basada en el marco europeo DigCompEdu, enfocada en mejorar el uso de
+                                    tecnologías en la educación superior. <button class="btn btn-pink mt-2"
+                                        id="btn-participaciones">Mas detalles</button>
                                 </p>
+
+
                                 <!-- Badges de tecnologías -->
                                 <div class="mb-3">
                                     <span class="badge badge-html me-1">HTML</span>
@@ -376,8 +463,16 @@
                                     <span class="badge badge-javascript me-1">JavaScript</span>
                                     <span class="badge badge-php me-1">PHP</span>
                                 </div>
-                                <a target="_blank" href="https://edu-tech-pro.vercel.app/"
-                                    class="btn btn-pink mt-auto">Ver proyecto</a>
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://edu-tech-pro.vercel.app/"
+                                            class="btn btn-pink w-100">Ver demo <i class="bi bi-eye-fill"></i></a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://github.com/LuisaLzrGcia/edu-tech-pro"
+                                            class="btn btn-pink w-100">Ver repositorio <i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -403,8 +498,16 @@
                                     <span class="badge badge-html me-1">HTML</span>
                                     <span class="badge badge-css me-1">CSS</span>
                                 </div>
-                                <a target="_blank" href="https://luisalzrgcia.github.io/clon-google/"
-                                    class="btn btn-pink mt-auto">Ver proyecto</a>
+                                <div class="row g-2">
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://luisalzrgcia.github.io/clon-google/"
+                                            class="btn btn-pink w-100">Ver demo <i class="bi bi-eye-fill"></i></a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <a target="_blank" href="https://github.com/LuisaLzrGcia/clon-google"
+                                            class="btn btn-pink w-100">Ver repositorio <i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -483,6 +586,7 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

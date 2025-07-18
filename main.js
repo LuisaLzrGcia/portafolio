@@ -105,3 +105,28 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
       console.error('EmailJS Error:', error);
     });
 });
+
+document.getElementById("goToAbout").addEventListener("click", function (e) {
+  e.preventDefault(); // Previene el salto inmediato
+  const target = document.getElementById("about-me");
+  target.scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("btn-participaciones").addEventListener("click", function () {
+  Swal.fire({
+    title: 'Participaciones destacadas',
+    html: `
+        <p>Este proyecto fue desarrollado durante mi formación universitaria y presentado en diversos eventos académicos y científicos, destacando su impacto y valor investigativo.</p>
+        <ul style="text-align: left;">
+          <li><strong>FONAGE 2022</strong></li>
+          <li><strong>Concurso de Carteles Científicos y Tecnológicos en el Congreso Internacional de Tecnología e Innovación Veracruz 2022.</strong></li>
+          <li><strong>VII Congreso IDI-UNICyT 2022:</strong> Universidad Internacional de Ciencia y Tecnología.</li>
+          <li><strong>Artículo:</strong> "Diagnóstico de competencias digitales docentes…" en <em>Creatividad e Innovación en Educación</em> (Vol. 2, Núm. 1, 2023).</li>
+          <li><strong>Artículo:</strong> “Desarrollo de herramienta web…” en <em>RINDERESU</em> (Vol. 7, Núms. 1 y 2, 2022).</li>
+          <li><strong>Artículo:</strong> Publicado en la revista indexada <em>Ingeniantes</em> (Año 9, No. 2, Vol. 3).</li>
+        </ul>
+      `,
+    confirmButtonText: 'Cerrar',
+    confirmButtonColor: '#ca535f'
+  });
+});
